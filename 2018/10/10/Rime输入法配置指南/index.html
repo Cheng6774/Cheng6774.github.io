@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Rime指南本文用以记录作者在进行Rime输入法私人配置中学习到的相关方法，亦可用于初学者对Rime进行配置的指南Rime个人配置的仓库地址">
+<meta name="keywords" content="编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rime输入法配置指南">
+<meta property="og:url" content="http://yoursite.com/2018/10/10/Rime输入法配置指南/index.html">
+<meta property="og:site_name" content="Cheng6774_blog">
+<meta property="og:description" content="Rime指南本文用以记录作者在进行Rime输入法私人配置中学习到的相关方法，亦可用于初学者对Rime进行配置的指南Rime个人配置的仓库地址">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/720db05fgw1eqljb9qfdwj203t014744.jpg">
+<meta property="og:updated_time" content="2019-03-05T14:46:20.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rime输入法配置指南">
+<meta name="twitter:description" content="Rime指南本文用以记录作者在进行Rime输入法私人配置中学习到的相关方法，亦可用于初学者对Rime进行配置的指南Rime个人配置的仓库地址">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/720db05fgw1eqljb9qfdwj203t014744.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/10/Rime输入法配置指南/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Rime输入法配置指南 | Cheng6774_blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Cheng6774_blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/10/Rime输入法配置指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cheng6774">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheng6774_blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Rime输入法配置指南</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-10T22:30:00+08:00">2018-10-10</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Rime指南"><a href="#Rime指南" class="headerlink" title="Rime指南"></a>Rime指南</h1><p>本文用以记录作者在进行Rime输入法私人配置中学习到的相关方法，亦可用于初学者对Rime进行配置的指南<br>Rime个人配置的<a href="https://github.com/Cheng6774/Rime" target="_blank" rel="noopener">仓库地址</a>  </p>
+<a id="more"></a>
+<h2 id="本篇目录"><a href="#本篇目录" class="headerlink" title="本篇目录"></a>本篇目录</h2><p>[TOC]</p>
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><h3 id="1-1-安装与卸载"><a href="#1-1-安装与卸载" class="headerlink" title="1.1 安装与卸载"></a>1.1 安装与卸载</h3><p>&emsp; <a href="https://rime.im/" target="_blank" rel="noopener">小狼毫安装包</a><br>&emsp; <strong>最简单的使用方法</strong>安装完成后将文件复制到用户文件夹全部进行替换即可使用。(自定义配置，请参考压缩包里的 f-customize.txt 一份简明的配置说明 )。</p>
+<h3 id="1-2-本篇参考"><a href="#1-2-本篇参考" class="headerlink" title="1.2 本篇参考"></a>1.2 本篇参考</h3><p>&emsp; <a href="https://www.zybuluo.com/eternity/note/81763" target="_blank" rel="noopener">致第一次安装RIME的你</a> （必读） </p>
+<p>&emsp; <a href="https://www.jianshu.com/p/1ff29f75920a" target="_blank" rel="noopener">RIME-小狼毫</a>（参考部分注释）</p>
+<p>&emsp; <a href="https://www.jianshu.com/p/cffc0ea094a7" target="_blank" rel="noopener">Rime输入法—鼠须管(Squirrel)词库添加及配置</a>(参考如何自制词库)</p>
+<p>&emsp; <a href="https://blog.dwx.io/my-rime/#Rime" target="_blank" rel="noopener">我的 Rime</a>（说明比较全）  </p>
+<p>&emsp; 并鸣谢以上文章及其他网上教程的作者。</p>
+<h3 id="1-3-补丁制作方法"><a href="#1-3-补丁制作方法" class="headerlink" title="1.3 补丁制作方法"></a>1.3 补丁制作方法</h3><p>&emsp; 创建一个文件名的主体部份（「.」之前）与要定制的文件相同、次级扩展名（「.yaml」之前）为.custom的定制文档：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">  &quot;一級設定項/二級設定項/三級設定項&quot;: 新的設定值</span><br><span class="line">  &quot;另一個設定項&quot;: 新的設定值</span><br><span class="line">  &quot;再一個設定項&quot;: 新的設定值</span><br><span class="line">  &quot;含列表的設定項/@n&quot;: 列表第n個元素新的設定值,从零开始计数</span><br><span class="line">  &quot;含列表的設定項/@last&quot;: 列表最後一個元素新的設定值</span><br><span class="line">  &quot;含列表的設定項/@before 0&quot;: 在列表第一個元素之前插入新的設定值（不建議在補靪中使用）</span><br><span class="line">  &quot;含列表的設定項/@after last&quot;: 在列表最後一個元素之後插入新的設定值（不建議在補靪中使用）</span><br><span class="line">  &quot;含列表的設定項/@next&quot;: 在列表最後一個元素之後插入新的設定值（不建議在補靪中使用）</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-4-其他注意事项"><a href="#1-4-其他注意事项" class="headerlink" title="1.4 其他注意事项"></a>1.4 其他注意事项</h3><p>&emsp; 所有个人的代码文件设置在<code>用户文件夹</code>即<code>~\AppData\Roaming\Rime</code>中操作。当用户需要对Rime 中的各种设定做小幅的调节，推荐的定制方法是：创建一个文件名的主体部份（「.」之前）与要定制的文件相同、次级扩展名（「.yaml」之前）为.custom的定制文档,修改完代码并保存之后都要重新部署。</p>
+<h2 id="2-输入法界面操作"><a href="#2-输入法界面操作" class="headerlink" title="2. 输入法界面操作"></a>2. 输入法界面操作</h2><h3 id="2-1-输入时的切换"><a href="#2-1-输入时的切换" class="headerlink" title="2.1 输入时的切换"></a>2.1 输入时的切换</h3><p>&emsp; 利用<code>ctral + ~</code>打开输入法切换，可以切换各种输入法，繁简切换，中英文切换，半角全角切换以及日常字库（输入中文）及增广字库（输入其他语言）的切换</p>
+<h3 id="2-2-输入法方式和皮肤的快捷切换（慎用）"><a href="#2-2-输入法方式和皮肤的快捷切换（慎用）" class="headerlink" title="2.2 输入法方式和皮肤的快捷切换（慎用）"></a>2.2 输入法方式和皮肤的快捷切换（慎用）</h3><p>&emsp; <strong><em>慎用，会覆盖重写default.custom.yaml文件，导致其初始化。</em></strong><br>&emsp; 右击托盘输入法图标打开<code>输入法设定</code>选项即可打开并勾选激活输入法页面（红色框中的图标）<img src="http://ww1.sinaimg.cn/large/720db05fgw1eqljb9qfdwj203t014744.jpg" alt="avatar"><br>再点击<code>中</code>打开输入法皮肤切换选项，选择完毕后再点击一次<code>中</code>确定并退出。</p>
+<h2 id="3-Rime常规全局配置"><a href="#3-Rime常规全局配置" class="headerlink" title="3. Rime常规全局配置"></a>3. Rime常规全局配置</h2><h3 id="3-1-调整候选窗横竖排显示"><a href="#3-1-调整候选窗横竖排显示" class="headerlink" title="3.1 调整候选窗横竖排显示"></a>3.1 调整候选窗横竖排显示</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>weasel.custom.yaml</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">    &quot;style/horizontal&quot;: false   # true为横排</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-2-调整字体字号"><a href="#3-2-调整字体字号" class="headerlink" title="3.2 调整字体字号"></a>3.2 调整字体字号</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>weasel.custom.yaml</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">    &quot;style/font_face&quot;: &quot;Microsoft YaHei &quot;  # 字体名称，从记事本等系统字体对话框能看到。</span><br><span class="line">    &quot;style/font_point&quot;: 15     # 字号，只认数字的，不认「五号」、「小五」等</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-3-调整候选栏颜色样式"><a href="#3-3-调整候选栏颜色样式" class="headerlink" title="3.3 调整候选栏颜色样式"></a>3.3 调整候选栏颜色样式</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>weasel.custom.yaml</code>。<br>&emsp; 选择内置样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">    &quot;style/color_scheme&quot;: google  # 谷歌皮肤</span><br></pre></td></tr></table></figure>
+<p>&emsp; 自定义样式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">    &quot;style/color_scheme&quot;: blue    # 這項用於選中下面定義的新方案</span><br><span class="line">    &quot;preset_color_schemes/blue&quot;:  # 在配色方案列表裏加入標識爲 blue 的新方案</span><br><span class="line">    &quot;name&quot;: blue</span><br><span class="line">    &quot;author&quot;: Cheng6774 , original artwork by Blizzard Entertainment</span><br><span class="line">    &quot;text_color&quot;: 0x000000             # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR</span><br><span class="line">    &quot;candidate_text_color&quot;: 0x000000   # 候選項文字顏色，當與文字顏色不同時指定</span><br><span class="line">    &quot;back_color&quot;: 0xeceeee             # 底色</span><br><span class="line">    &quot;border_color&quot;: 0xeceeee           # 邊框顏色，與底色相同則爲無邊框的效果</span><br><span class="line">    &quot;hilited_text_color&quot;: 0x000000     # 高亮文字，即與當前高亮候選對應的那部份輸入碼</span><br><span class="line">    &quot;hilited_back_color&quot;: 0xd4d4d4     # 設定高亮文字的底色，可起到凸顯高亮部份的作用</span><br><span class="line">    &quot;hilited_candidate_text_color&quot;: 0xffffff  # 高亮候選項的文字顏色，要醒目！</span><br><span class="line">    &quot;hilited_candidate_back_color&quot;: 0xfa3a0a  # 高亮候選項的底色，若與背景色不同就會顯出光棒</span><br><span class="line"></span><br><span class="line">在[这里](http://pan.baidu.com/s/1mi6vzmC)提供样式生成工具。</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-4-在特定程序里关闭中文输入"><a href="#3-4-在特定程序里关闭中文输入" class="headerlink" title="3.4 在特定程序里关闭中文输入"></a>3.4 在特定程序里关闭中文输入</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>weasel.custom.yaml</code>。【小狼毫】0.9.16 亦开始支持这项设定。<br>&emsp; 例如，要在photoshop里面默认关闭中文输入，可如此设定：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pathch:</span><br><span class="line">    app_options/photoshop.exe: # 程序名字全用小写字母</span><br><span class="line">    ascii_mode: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-5-定制候选栏词数"><a href="#3-5-定制候选栏词数" class="headerlink" title="3.5 定制候选栏词数"></a>3.5 定制候选栏词数</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>default.custom.yaml</code>。<br>&emsp; 在RIME中默认是5候选数，而允许的范围是1~9（个别Rime 发行版可支持10个候选）。设定每页候选个数的为6个字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">    &quot;menu/page_size&quot;: 6</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-6-调整输入法开启"><a href="#3-6-调整输入法开启" class="headerlink" title="3.6 调整输入法开启"></a>3.6 调整输入法开启</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>default.custom.yaml</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">  schema_list:  # “输入选单”中激活的输入方案定义。</span><br><span class="line">    - &#123;schema: luna_pinyin_simp&#125;       # 明月拼音简体</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-7-方案选项呼出热键"><a href="#3-7-方案选项呼出热键" class="headerlink" title="3.7 方案选项呼出热键"></a>3.7 方案选项呼出热键</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>default.custom.yaml</code>。<br>&emsp; 如修改热键为<code>Control+~</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">  &quot;switcher/hotkeys&quot;:</span><br><span class="line">    - &quot;Control+grave&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-8-中西文切换键设置"><a href="#3-8-中西文切换键设置" class="headerlink" title="3.8 中西文切换键设置"></a>3.8 中西文切换键设置</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>default.custom.yaml</code>。<br>&emsp; 可选的临时切换策略有三种：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">inline_ascii ：在输入法的临时西文编辑区内输入字母、数字、符号、空格等，回车上屏后自动复位到中文。</span><br><span class="line">commit_text ：已输入的候选文字上屏并切换至西文输入模式。</span><br><span class="line">commit_code ：已输入的编码字符上屏并切换至西文输入模式。</span><br><span class="line">noop ：屏蔽该切换键。</span><br></pre></td></tr></table></figure></p>
+<p>&emsp; 例如要设置快捷键capslock的直接上屏功能:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ascii_composer/good_old_caps_lock: true # 表示打开此功能</span><br><span class="line">ascii_composer/switch_key:              </span><br><span class="line">  Caps_Lock: commit_code                # 摁capslook直接上屏</span><br><span class="line">  Shift_L: commit_code</span><br><span class="line">  Shift_R: commit_code</span><br><span class="line">  Control_L: noop                       # 无反应</span><br><span class="line">  Control_R: noop</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-9-输入法快捷键设置"><a href="#3-9-输入法快捷键设置" class="headerlink" title="3.9 输入法快捷键设置"></a>3.9 输入法快捷键设置</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>default.custom.yaml</code>。<br>&emsp; 如修改热键为<code>Control+p</code>，使其在打开输入候选项状态下为向上移动作用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line"> key_binder:</span><br><span class="line">    bindings:</span><br><span class="line">    - &#123;accept: &quot;Control+p&quot;, send: Up, when: composing&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-10-输入法同步"><a href="#3-10-输入法同步" class="headerlink" title="3.10 输入法同步"></a>3.10 输入法同步</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>installation.custom.yaml</code>。  </p>
+<ul>
+<li><p>1.设置导出配置文件名为<code>E:\OneDrive - whut.edu.cn\software backup\Rime backup</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sync_dir: &apos;E:\OneDrive - whut.edu.cn\software backup\Rime backup&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.设置导出的文件夹名称自定义名称Cheng。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">installation_id: &quot;Cheng&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.在桌面托盘中右键点击输入法图标选择<code>用户词典管理</code>，选择输入法后单击<code>输出词典快照</code>即可导出用户输入习惯数据库到同步路径中。</p>
+</li>
+<li>4.对同步路径下的<code>Cheng</code>文件夹进行移动或同步到新电脑。</li>
+<li>5.在新电脑安装小狼毫后将<code>Cheng</code>文件夹移动到相同的<code>E:\OneDrive - whut.edu.cn\software backup\Rime backup</code>同步路径下。</li>
+<li>6.在新电脑的桌面托盘中右击输入法图标选择<code>用户资料同步</code>并重新部署完成同步。</li>
+</ul>
+<h2 id="4-词库设置"><a href="#4-词库设置" class="headerlink" title="4. 词库设置"></a>4. 词库设置</h2><h3 id="4-1-词库代码头设置"><a href="#4-1-词库代码头设置" class="headerlink" title="4.1 词库代码头设置"></a>4.1 词库代码头设置</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。对明月拼音输入法的词库修改文件：<code>luna_pinyin.extended.dict.yaml</code>。<br>&emsp; 词库开头先进行关于该词库的代码设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---                          # 代码开头分隔符</span><br><span class="line">name: luna_pinyin.sogou      # 这就是你自定义的词库的名字:sogou，后面还要用到</span><br><span class="line">version: &quot;2015.XX.XX&quot;        # 版本时间，最好填当前时间，要版本控制的意识</span><br><span class="line">sort: by_weight              # 开启按照字词比重排序方式</span><br><span class="line">use_preset_vocabulary: true  # 是否导入输入法预置词库</span><br><span class="line">...                          # 代码结束分隔符，分隔符以下是具体字词表</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-2-在词库中引入其他子词库"><a href="#4-2-在词库中引入其他子词库" class="headerlink" title="4.2 在词库中引入其他子词库"></a>4.2 在词库中引入其他子词库</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。对明月拼音输入法的词库修改文件：<code>luna_pinyin.extended.dict.yaml</code>。<br>&emsp; 例如引用搜狗核心词库。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import_tables:</span><br><span class="line">  - luna_pinyin.sgmain        # 搜狗核心词库</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-3-手动添加字词到词库"><a href="#4-3-手动添加字词到词库" class="headerlink" title="4.3 手动添加字词到词库"></a>4.3 手动添加字词到词库</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改相应的补丁词库：<code>xxx.dict.yaml</code>。<br>&emsp; 在相应的补丁词库文件夹中，按照以下格式添加。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[上屏词语](tab键)[输入的罗马拼音](tab键)[词语比重]</span><br><span class="line">输入的罗马拼音音节之间用space键分隔</span><br></pre></td></tr></table></figure></p>
+<p>&emsp; 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">北海    bei hai 100</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-4-添加中文输入状态下的英文词库"><a href="#4-4-添加中文输入状态下的英文词库" class="headerlink" title="4.4 添加中文输入状态下的英文词库"></a>4.4 添加中文输入状态下的英文词库</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>luna_pinyin.cn_en.dict.yaml</code>。<br>&emsp; 在该词库文件中按照4.3节方法操作即可。添加的英文单词可以在中文输入状态下输入字母后直接显示到输入候选单上。</p>
+<h3 id="4-5-从其他输入法导出自制词库"><a href="#4-5-从其他输入法导出自制词库" class="headerlink" title="4.5 从其他输入法导出自制词库"></a>4.5 从其他输入法导出自制词库</h3><p>&emsp; 参考<a href="https://www.jianshu.com/p/cffc0ea094a7" target="_blank" rel="noopener">Rime输入法—鼠须管(Squirrel)词库添加及配置</a></p>
+<h2 id="5-输入法文件设置-以明月简拼为例"><a href="#5-输入法文件设置-以明月简拼为例" class="headerlink" title="5 输入法文件设置(以明月简拼为例)"></a>5 输入法文件设置(以明月简拼为例)</h2><h3 id="5-1-输入法的模式切换"><a href="#5-1-输入法的模式切换" class="headerlink" title="5.1 输入法的模式切换"></a>5.1 输入法的模式切换</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>luna_pinyin_simp.custom.yaml</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">  switches:</span><br><span class="line">    - name: ascii_mode           # 中英文切换</span><br><span class="line">      reset: 0                   # 设置默认输入状态为中文</span><br><span class="line">      states: [&quot;中文&quot;, &quot;西文&quot;]    # 在方案选单中显示的样式</span><br><span class="line">    - name: full_shape           # 半角全角切换</span><br><span class="line">      states: [&quot;半角&quot;, &quot;全角&quot;]    # 在方案选单中显示的样式</span><br><span class="line">    - name: extended_charset     # 码表设置</span><br><span class="line">      states: [&quot;通用&quot;, &quot;增廣&quot;]    # 在方案选单中显示的样式</span><br><span class="line">    - name: zh_simp              # 简繁体切换</span><br><span class="line">      reset: 1                   # 强制简体输入</span><br><span class="line">      states: [&quot;漢字&quot;, &quot;汉字&quot;]    # 在方案选单中显示的样式</span><br><span class="line">    - name: ascii_punct          # 中英文标点切换</span><br><span class="line">      states: [&quot;。，&quot;, &quot;．，&quot;]    # 在方案选单中显示的样式</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-2-输入法扩充词库载入"><a href="#5-2-输入法扩充词库载入" class="headerlink" title="5.2 输入法扩充词库载入"></a>5.2 输入法扩充词库载入</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>luna_pinyin_simp.custom.yaml</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">  # 載入朙月拼音擴充詞庫</span><br><span class="line">  &quot;translator/dictionary&quot;: luna_pinyin.extended</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-3-标点符号及特殊表情设置"><a href="#5-3-标点符号及特殊表情设置" class="headerlink" title="5.3 标点符号及特殊表情设置"></a>5.3 标点符号及特殊表情设置</h3><ul>
+<li><ol>
+<li>先对符号及特殊表情词库symbols.yaml文件进行设置。symbols.yaml文件是系统文件，也可以自定义一份mysymbols.yaml文件覆盖系统文件，此时必须将系统文件symbols.yaml中的所有内容复制到自定义文件中。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>然后对输入法文件xxx.custom.yaml文件设置导入需要的符号文件(symbols或者mysymbols)。<br>修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>luna_pinyin_simp.custom.yaml</code>。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line">  # 标点及特殊表情...</span><br><span class="line">  &apos;punctuator/import_preset&apos;: symbols  # 或者将系统文件替换为mysmbols</span><br><span class="line">  &apos;recognizer/patterns/punct&apos;: &quot;^/([a-z]+|[0-9])$&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="5-4-模糊音设置"><a href="#5-4-模糊音设置" class="headerlink" title="5.4 模糊音设置"></a>5.4 模糊音设置</h3><p>&emsp; 修改路径：<code>~\AppData\Roaming\Rime</code>。修改文件：<code>luna_pinyin_simp.custom.yaml</code>。<br>&emsp; 根据已经写入的模糊音规则，需要哪一组取消对应的注释即可.</p>
+<h2 id="6-本配置详细信息"><a href="#6-本配置详细信息" class="headerlink" title="6. 本配置详细信息"></a>6. 本配置详细信息</h2><p>&emsp; 除前文举例的代码已经写入配置文件以外，还有其他一些较为重要的配置情况一并列出:</p>
+<h3 id="6-1-词库信息"><a href="#6-1-词库信息" class="headerlink" title="6.1 词库信息"></a>6.1 词库信息</h3><p>&emsp; 本配置附带所有词库如下(这些配置均可以在<code>luna_pinyin.extended.dict.yaml</code>文件中开启或关闭):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">  - luna_pinyin               # 系统自带词库，无意外必须开启。</span><br><span class="line">  - luna_pinyin.anime         # 动漫词汇大全，动画、主要角色、声优等等。3w</span><br><span class="line">  - luna_pinyin.chat          # 日常聊天常用词，请叫我聊天达人。3.5k</span><br><span class="line">  - luna_pinyin.cn_en         # 中英混合词条</span><br><span class="line">  - luna_pinyin.game          # 游戏名词</span><br><span class="line">  - luna_pinyin.hanyu         # 汉语大詞典</span><br><span class="line">  - luna_pinyin.history       # 历史相关</span><br><span class="line">  - luna_pinyin.movie         # 电影相关词汇，片名、演员、导演等。1.3w</span><br><span class="line">  - luna_pinyin.music         # 音乐相关词汇，歌曲、制作人、歌星之类的。2w</span><br><span class="line">  - luna_pinyin.name          # 人名词库，知乎，含中外名人 1w</span><br><span class="line">  - luna_pinyin.net           # 网络流行词，网上聊天常用的语句。3.6w</span><br><span class="line">  # - luna_pinyin.phrase        # 输入拼音弹出的颜文字词库</span><br><span class="line">  - luna_pinyin.poetry        # 常用诗词，来源于唐宋诗词、千家詩、花間集、楚辭、詩經。 2.6w</span><br><span class="line">  - luna_pinyin.website       # 网站大全，百度、知乎等。5k</span><br><span class="line">  # - luna_pinyin.extra_hanzi   # 生僻汉字库</span><br><span class="line">  - luna_pinyin.sgmain        # 搜狗核心词库</span><br><span class="line">  - luna_pinyin.sgplus        # 搜狗扩展词库1</span><br><span class="line">  - luna_pinyin.sgplus2       # 搜狗扩展词库2 </span><br><span class="line">  - luna_pinyin.user          # 词库增强包</span><br><span class="line">  - luna_pinyin.english       # 英文单词库</span><br><span class="line">#  - luna_pinyin.biaoqing      # 输入‘v v’弹出的颜文字词库</span><br><span class="line">  - luna_pinyin.computer      # 计算机术语词库</span><br><span class="line">  - luna_pinyin.place         # 地名词库</span><br><span class="line">  - luna_pinyin.shopping      # 商品词库</span><br><span class="line">  - luna_pinyin.contact       # 常用人名词库</span><br><span class="line">  #以下不常用</span><br><span class="line">  - luna_pinyin.emoji         # emoji表情词库</span><br><span class="line">  - luna_pinyin.i             # 常用英文缩写词库</span><br><span class="line">  - luna_pinyin.kaomoji       # </span><br><span class="line">  # 来源 搜狗细胞词库</span><br><span class="line">  - c_botany                  # 植物学词汇</span><br><span class="line">  - c_chemistry               # 化学化工词汇</span><br><span class="line">  - c_computer                # 计算机词汇</span><br><span class="line">  - c_finance                 # 金融词汇</span><br><span class="line">  - c_geology                 # 地理地质词汇</span><br><span class="line">  - c_medicine                # 中西医词汇</span><br><span class="line">  - c_nalanxingde_all         # 纳兰性德185首</span><br><span class="line">  - c_shijing_all             # 诗经全文</span><br><span class="line">  - c_stock                   # 股票基金词汇</span><br><span class="line">  - c_popular                 # 网络流行新词</span><br><span class="line">  - c_ship                    # 船舶港口词汇</span><br><span class="line">  - c_place                   # 全国地名大全</span><br><span class="line">  - c_beihai_place            # 北海地名</span><br><span class="line">  - c_beihai_language         # 北海方言</span><br><span class="line">  - c_catering                # 餐饮词汇</span><br><span class="line">  # 用于进行自定义设置</span><br><span class="line">  - f_myphrases</span><br><span class="line">  - f_mysecretphrases</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-2-输入法信息"><a href="#6-2-输入法信息" class="headerlink" title="6.2 输入法信息"></a>6.2 输入法信息</h3><p>&emsp; 本配置附带所有输入法如下（这些配置均可以在<code>default.custom.yaml</code>文件中开启或关闭）:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- &#123;schema: luna_pinyin_fluency&#125; # 明月拼音语句流</span><br><span class="line">- &#123;schema: luna_pinyin_simp&#125;    # 明月拼音简拼</span><br><span class="line">- &#123;schema: BakHoi_JyutPing&#125;     # 北海拼音</span><br><span class="line"># - &#123;schema: bopomofo&#125;            # 注音</span><br><span class="line"># - &#123;schema: bopomofo_express&#125;    # 注音——快打模式</span><br><span class="line"># - &#123;schema: bopomofo_tw&#125;         # 注音——台湾正体</span><br><span class="line"># - &#123;schema: cangjie5&#125;            # 仓颉五代</span><br><span class="line"># - &#123;schema: cangjie5_express&#125;    # 仓颉五代——快打模式</span><br><span class="line"># - &#123;schema: luna_pinyin&#125;         # 明月拼音</span><br><span class="line"># - &#123;schema: luna_pinyin_tw&#125;      # 明月拼音——台湾正体</span><br><span class="line"># - &#123;schema: luna_quanpin&#125;        # 全拼</span><br><span class="line"># - &#123;schema: stroke&#125;              # 五笔画</span><br><span class="line"># - &#123;schema: terra_pinyin&#125;        # 地球拼音</span><br><span class="line"># - &#123;schema: easy_en&#125;             # easy english</span><br><span class="line"># - &#123;schema: luna_pinyin_stroke&#125;  # 明月拼音——笔画辅助码</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/编程/" rel="tag"># 编程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/02/23/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/31/影单/" rel="prev" title="影单">
+                影单 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Cheng6774</p>
+              <p class="site-description motion-element" itemprop="description">This is Cheng's blog</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Rime指南"><span class="nav-number">1.</span> <span class="nav-text">Rime指南</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本篇目录"><span class="nav-number">1.1.</span> <span class="nav-text">本篇目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.2.</span> <span class="nav-text">1. 前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-安装与卸载"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.1 安装与卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-本篇参考"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2 本篇参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-补丁制作方法"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.3 补丁制作方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-其他注意事项"><span class="nav-number">1.2.4.</span> <span class="nav-text">1.4 其他注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-输入法界面操作"><span class="nav-number">1.3.</span> <span class="nav-text">2. 输入法界面操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-输入时的切换"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.1 输入时的切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-输入法方式和皮肤的快捷切换（慎用）"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.2 输入法方式和皮肤的快捷切换（慎用）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Rime常规全局配置"><span class="nav-number">1.4.</span> <span class="nav-text">3. Rime常规全局配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-调整候选窗横竖排显示"><span class="nav-number">1.4.1.</span> <span class="nav-text">3.1 调整候选窗横竖排显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-调整字体字号"><span class="nav-number">1.4.2.</span> <span class="nav-text">3.2 调整字体字号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-调整候选栏颜色样式"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.3 调整候选栏颜色样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-在特定程序里关闭中文输入"><span class="nav-number">1.4.4.</span> <span class="nav-text">3.4 在特定程序里关闭中文输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-定制候选栏词数"><span class="nav-number">1.4.5.</span> <span class="nav-text">3.5 定制候选栏词数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-调整输入法开启"><span class="nav-number">1.4.6.</span> <span class="nav-text">3.6 调整输入法开启</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-方案选项呼出热键"><span class="nav-number">1.4.7.</span> <span class="nav-text">3.7 方案选项呼出热键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-中西文切换键设置"><span class="nav-number">1.4.8.</span> <span class="nav-text">3.8 中西文切换键设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-输入法快捷键设置"><span class="nav-number">1.4.9.</span> <span class="nav-text">3.9 输入法快捷键设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-10-输入法同步"><span class="nav-number">1.4.10.</span> <span class="nav-text">3.10 输入法同步</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-词库设置"><span class="nav-number">1.5.</span> <span class="nav-text">4. 词库设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-词库代码头设置"><span class="nav-number">1.5.1.</span> <span class="nav-text">4.1 词库代码头设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在词库中引入其他子词库"><span class="nav-number">1.5.2.</span> <span class="nav-text">4.2 在词库中引入其他子词库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-手动添加字词到词库"><span class="nav-number">1.5.3.</span> <span class="nav-text">4.3 手动添加字词到词库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-添加中文输入状态下的英文词库"><span class="nav-number">1.5.4.</span> <span class="nav-text">4.4 添加中文输入状态下的英文词库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-从其他输入法导出自制词库"><span class="nav-number">1.5.5.</span> <span class="nav-text">4.5 从其他输入法导出自制词库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-输入法文件设置-以明月简拼为例"><span class="nav-number">1.6.</span> <span class="nav-text">5 输入法文件设置(以明月简拼为例)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-输入法的模式切换"><span class="nav-number">1.6.1.</span> <span class="nav-text">5.1 输入法的模式切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-输入法扩充词库载入"><span class="nav-number">1.6.2.</span> <span class="nav-text">5.2 输入法扩充词库载入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-标点符号及特殊表情设置"><span class="nav-number">1.6.3.</span> <span class="nav-text">5.3 标点符号及特殊表情设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-模糊音设置"><span class="nav-number">1.6.4.</span> <span class="nav-text">5.4 模糊音设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-本配置详细信息"><span class="nav-number">1.7.</span> <span class="nav-text">6. 本配置详细信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-词库信息"><span class="nav-number">1.7.1.</span> <span class="nav-text">6.1 词库信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-输入法信息"><span class="nav-number">1.7.2.</span> <span class="nav-text">6.2 输入法信息</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cheng6774</span>
+
+  
+
+  
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.6</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.6"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
