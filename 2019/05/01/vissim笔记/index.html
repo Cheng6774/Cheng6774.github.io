@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="Cheng6774_blog">
 <meta property="og:description" content="README本文记录在学习使用vissim过程中的操作心得">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-21T07:52:49.401Z">
+<meta property="og:updated_time" content="2019-05-23T16:24:08.588Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vissim笔记">
 <meta name="twitter:description" content="README本文记录在学习使用vissim过程中的操作心得">
@@ -362,26 +362,23 @@
       
         <h1 id="README"><a href="#README" class="headerlink" title="README"></a>README</h1><p>本文记录在学习使用vissim过程中的操作心得</p>
 <a id="more"></a>
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><p>vissim多用右键绘图，右键点击空白处可查看该按键的属性</p>
-<p>导入底图操作：查看——背景——编辑——读取图片，在比例中画出实际一条车道的宽度并设置实际距离，保存后即可</p>
-<p>在查看——3D/2D模式中可以切换3D/2D模式</p>
-<p>点击“缩放”按钮后按住鼠标左键不动框选可以缩放某个区域</p>
-<p>单击“显示整个路网”按钮可以将整个路网显示在画面</p>
-<p>shift+鼠标左键可以移动对象</p>
-<p>滚动鼠标滚轮进行放大缩小</p>
-<p>在3D模式下使用旋转和飞行模式按键可以调整观看角度</p>
-<h1 id="车道线"><a href="#车道线" class="headerlink" title="车道线"></a>车道线</h1><p>利用路段/连接器可以画出车道线</p>
-<p>用路段/连接器先画出路段，用连接器连接交叉口各方向道路，连接器只能连接相同数量的车道</p>
-<p>对于交叉口的展宽段，可先分成不同车道数的路段画出来，然后分别用几个连接器连接</p>
-<p>单击“车道方向标志”按钮，单击要设置的路段后点击鼠标右键弹出车道方向标志设置对话框，选择不同方向的车道标</p>
-<p>对于车道之间的标志线，可以利用路段绘制按钮画出一条宽15cm左右的路段，利用“显示”设置里更改贴图图案绘制，同样可以利用link贴图布局人行道和高架桥线路</p>
-<p>切换3D模式后在单击鼠标右键可以弹出插入3D模型的对话框，选择要插入的模型</p>
-<p>单击车辆输入按钮，单击选择路段后点鼠标右键，插入车流量输入的起点并设置车流</p>
-<p>选择交通——vehicle composition打开交通组成对话框，新建或编辑想要的车流输入模型</p>
-<p>在车流量输入界面单击鼠标右键选择vehicle input可以为相同或不同车道设置车流输入情况</p>
-<p>在仿真——参数中具体设置仿真的属性</p>
-<p>要想加快仿真速度，可以放大局部空白处，避免路段显示在仿真画面中</p>
-<p>先画分叉路段再布置车辆输入，则车流会流向不同的岔道；先布置车辆输入再画分叉路段，则车流只会流向后面画的路段</p>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><p>vissim多用右键绘图，右键点击空白处可查看该按键的属性<br>导入底图操作：查看——背景——编辑——读取图片，在比例中画出实际一条车道的宽度并设置实际距离，保存后即可<br>点击“缩放”按钮后按住鼠标左键不动框选可以缩放某个区域<br>单击“显示整个路网”按钮可以将整个路网显示在画面<br>shift+鼠标左键可以移动对象<br>滚动鼠标滚轮进行放大缩小<br>单击左侧对象按钮后在空白图案处右键可以弹出相应类型所有对象的属性对话框<br>在仿真——参数中具体设置仿真的属性<br>要想加快仿真速度，可以放大局部空白处，避免路段显示在仿真画面中</p>
+<h1 id="车道线-车道连接器-连接单车道"><a href="#车道线-车道连接器-连接单车道" class="headerlink" title="车道线/车道连接器/连接单车道"></a>车道线/车道连接器/连接单车道</h1><p>利用路段/连接器可以画出车道线<br>用路段/连接器先画出路段，用连接器连接交叉口各方向道路，连接器只能连接相同数量的车道<br>单击路段的两端箭头，可以拖拽设置路段长度和方向<br>路段的车行方向随绘制时鼠标拖拽方向决定<br>绘制车道后在对话框可以产生对向车道，沿鼠标拖拽方向的左侧是原车道方向，右侧是对向车道<br>路段连接器的首尾段都要落在两个路段上<br>含有多条车道的路段，车行方向的右手边为1车道，左手边为最大车道<br>对于交叉口的展宽段，可先分成不同车道数的路段画出来，然后分别用几个连接器连接<br>在路段上单击鼠标右键可以将路段打断，生成一个节点</p>
+<h1 id="车道标志"><a href="#车道标志" class="headerlink" title="车道标志"></a>车道标志</h1><p>单击“车道方向标志”按钮，单击要设置的路段后点击鼠标右键弹出车道方向标志设置对话框，选择不同方向的车道标<br>对于车道之间的标志线，可以利用路段绘制按钮画出一条宽15cm左右的路段，利用“显示”设置里更改贴图图案绘制，同样可以利用link贴图布局人行道和高架桥线路<br>在绘制路段时设置起点和终点的高度，可以设置爬坡路段</p>
+<h1 id="3D模式"><a href="#3D模式" class="headerlink" title="3D模式"></a>3D模式</h1><p>在查看——3D/2D模式中可以切换3D/2D模式<br>在3D模式下使用旋转和飞行模式按键可以调整观看角度<br>切换3D模式后在单击鼠标右键可以弹出插入3D模型的对话框，选择要插入的模型<br>插入的模型是V3D文件，需要用3Dmax软件将3ds文件转换</p>
+<h1 id="车流量输入"><a href="#车流量输入" class="headerlink" title="车流量输入"></a>车流量输入</h1><p>单击车辆输入按钮，单击选择路段后点鼠标右键，插入车流量输入的起点并设置车流时间和大小<br>选择交通——vehicle composition打开交通组成对话框，新建或编辑想要的车流输入模型</p>
+<h1 id="新建车流模型"><a href="#新建车流模型" class="headerlink" title="新建车流模型"></a>新建车流模型</h1><p>traffic——traffic composition新建车流模型，在该模型中新建车辆种类，注意选择车辆种类、速度和百分比</p>
+<h1 id="同一车道设置多种车辆流"><a href="#同一车道设置多种车辆流" class="headerlink" title="同一车道设置多种车辆流"></a>同一车道设置多种车辆流</h1><p>方法1：在车流量输入界面单击鼠标右键选择new vehicle input可以在link number 选择车道号为相同或不同车道设置车流输入情况<br>方法2：或者在车流模型中直接设置不同车辆类型的比例</p>
+<h1 id="车辆类型和类别概念解析"><a href="#车辆类型和类别概念解析" class="headerlink" title="车辆类型和类别概念解析"></a>车辆类型和类别概念解析</h1><p>vehicle type ——某种特定的交通工具，如汽车/公交车等，具有相同驾驶行为和物理特征的工具<br>vehicle class ——定义由多个vehicle type组成的类别如机动车/非机动等<br>type用于创建交通流（traffic composition），class用于车道限制某类车流通过</p>
+<h1 id="新建车辆类型和应用"><a href="#新建车辆类型和应用" class="headerlink" title="新建车辆类型和应用"></a>新建车辆类型和应用</h1><p>1、基础数据——分布——颜色可以创建不同颜色<br>2、基础数据——vehicle type——新建不同type的车辆<br>3、创建车流，交通——traffic composition，创建车流并选择之前不同的type</p>
+<h1 id="分时设定车流"><a href="#分时设定车流" class="headerlink" title="分时设定车流"></a>分时设定车流</h1><p>选择车流输入按钮单击鼠标右键弹出设置对话框，在vehicle input对话框的右侧time栏右键新建时间段，可以设置不同的时间段<br>在vehicle input的左侧车道设置不同时间段的车流输入<br>仿真——参数设置仿真时间/仿真速度</p>
+<h1 id="为何使用路径决策"><a href="#为何使用路径决策" class="headerlink" title="为何使用路径决策"></a>为何使用路径决策</h1><p>调整车速在traffic composition中选择输入的车流类型，编辑车速</p>
+<h1 id="创建路径决策"><a href="#创建路径决策" class="headerlink" title="创建路径决策"></a>创建路径决策</h1><p>选择路径决策按钮后，在决策起始位置单击右键建立决策弹出对话框<br>一般输入车流量使用的路径决策类别（type）是static静态决策<br>局部路径决策是在静态决策基础上建立的，还有如停车决策（与停车有关）和动态决策（编程功能）<br>1、鼠标左键点击决策起点线路<br>2、在路段上鼠标右键创建决策起点，弹出对话框OK<br>3、鼠标左键点击决策终点线路<br>4、鼠标右键创建决策终点<br>5、重复3~4步创建多个终点<br>6、空白处双击鼠标左键结束创建<br>在弹出的属性框中可以选择查看不同的决策路径，红色代表起点，绿色代表终点，黄色线段代表决策路径</p>
+<h1 id="如何设置路径决策占比"><a href="#如何设置路径决策占比" class="headerlink" title="如何设置路径决策占比"></a>如何设置路径决策占比</h1><p>在路径决策属性对话框中，在对应的各时间段下，可以分别设置该时间段内不同路径的流量比例</p>
+<h1 id="如何设定局部路径决策partial-route"><a href="#如何设定局部路径决策partial-route" class="headerlink" title="如何设定局部路径决策partial route"></a>如何设定局部路径决策partial route</h1><p>先设置静态路径决策才能设置局部路径决策<br>一般局部路径用于模拟设置路段上某车道临时交通管制的情况<br>1、先在已经设置好的静态路径决策的路段上再画一小段路段<br>2、然后在这一小段路段的前后分别设置决策起点和终点，并在小段路上单击鼠标右键，出现一个节点拖动它设置路径宽度</p>
+<h1 id="如何设置停车路径决策parking-route"><a href="#如何设置停车路径决策parking-route" class="headerlink" title="如何设置停车路径决策parking route"></a>如何设置停车路径决策parking route</h1><p>在设置停车路径前首先要画停车场，点击左侧parking lot在路段上拖动绘制停车场<br>可以设置停车场长度和车位长度<br>直接左键可以拖动停车位位置<br>1、右键点击创建路径决策起点<br>2、选择停车决策<br>3、左键双击停车场，高亮蓝色后结束</p>
+<h1 id="如何设计减速区"><a href="#如何设计减速区" class="headerlink" title="如何设计减速区"></a>如何设计减速区</h1><p>1、点击左侧reduce speed area 按钮<br>2、起点点击鼠标右键不放拖拽到终点<br>3、弹出的设置对话框点击new新建<br>4、对不同类型的车流设置速度和加速度</p>
+<h1 id="如何使用stop-signal"><a href="#如何使用stop-signal" class="headerlink" title="如何使用stop signal"></a>如何使用stop signal</h1><p>在没有信号灯的路口设置停车用<br>1、点击左侧stop signal<br>2、在路段要设置停车让行的地方单击鼠标右键对该车道设置停车信号<br>3、一次只能对一个车道进行设置</p>
 
       
     </div>
@@ -417,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/31/transcad笔记/" rel="next" title="transcad笔记">
-                <i class="fa fa-chevron-left"></i> transcad笔记
+              <a href="/2019/03/31/AutoCAD笔记/" rel="next" title="AutoCAD笔记">
+                <i class="fa fa-chevron-left"></i> AutoCAD笔记
               </a>
             
           </div>
@@ -562,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#README"><span class="nav-number">1.</span> <span class="nav-text">README</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本操作"><span class="nav-number">2.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#车道线"><span class="nav-number">3.</span> <span class="nav-text">车道线</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#README"><span class="nav-number">1.</span> <span class="nav-text">README</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本操作"><span class="nav-number">2.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#车道线-车道连接器-连接单车道"><span class="nav-number">3.</span> <span class="nav-text">车道线/车道连接器/连接单车道</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#车道标志"><span class="nav-number">4.</span> <span class="nav-text">车道标志</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3D模式"><span class="nav-number">5.</span> <span class="nav-text">3D模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#车流量输入"><span class="nav-number">6.</span> <span class="nav-text">车流量输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新建车流模型"><span class="nav-number">7.</span> <span class="nav-text">新建车流模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同一车道设置多种车辆流"><span class="nav-number">8.</span> <span class="nav-text">同一车道设置多种车辆流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#车辆类型和类别概念解析"><span class="nav-number">9.</span> <span class="nav-text">车辆类型和类别概念解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新建车辆类型和应用"><span class="nav-number">10.</span> <span class="nav-text">新建车辆类型和应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分时设定车流"><span class="nav-number">11.</span> <span class="nav-text">分时设定车流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为何使用路径决策"><span class="nav-number">12.</span> <span class="nav-text">为何使用路径决策</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建路径决策"><span class="nav-number">13.</span> <span class="nav-text">创建路径决策</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何设置路径决策占比"><span class="nav-number">14.</span> <span class="nav-text">如何设置路径决策占比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何设定局部路径决策partial-route"><span class="nav-number">15.</span> <span class="nav-text">如何设定局部路径决策partial route</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何设置停车路径决策parking-route"><span class="nav-number">16.</span> <span class="nav-text">如何设置停车路径决策parking route</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何设计减速区"><span class="nav-number">17.</span> <span class="nav-text">如何设计减速区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何使用stop-signal"><span class="nav-number">18.</span> <span class="nav-text">如何使用stop signal</span></a></li></ol></div>
             
 
           </div>
