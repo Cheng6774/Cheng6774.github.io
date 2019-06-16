@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="README本文记录在学习使用vissim7过程中的操作心得">
+<meta name="keywords" content="学习笔记,专业软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vissim7笔记">
+<meta property="og:url" content="http://yoursite.com/2019/05/01/vissim7笔记/index.html">
+<meta property="og:site_name" content="Cheng6774_blog">
+<meta property="og:description" content="README本文记录在学习使用vissim7过程中的操作心得">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-10T14:59:04.577Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vissim7笔记">
+<meta name="twitter:description" content="README本文记录在学习使用vissim7过程中的操作心得">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/01/vissim7笔记/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>vissim7笔记 | Cheng6774_blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Cheng6774_blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/01/vissim7笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cheng6774">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheng6774_blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vissim7笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-01T23:03:04+08:00">2019-05-01</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="README"><a href="#README" class="headerlink" title="README"></a>README</h1><p>本文记录在学习使用vissim7过程中的操作心得</p>
+<a id="more"></a>
+<h1 id="vissim7学习"><a href="#vissim7学习" class="headerlink" title="vissim7学习"></a>vissim7学习</h1><h1 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h1><p>vissim高版本增加了撤销重做按钮</p>
+<h2 id="路网对象栏"><a href="#路网对象栏" class="headerlink" title="路网对象栏"></a>路网对象栏</h2><p>左侧的路网对象图标，点击文字使其显示黄底表示激活了该路网对象，点击相应图标可以显示或隐藏路网对象<br>点击锁定按钮可以使路网对象固定防止被拖动，点击标签可以显示路网对象的编号等<br>最后一个按钮可以编辑图形参数</p>
+<h2 id="层"><a href="#层" class="headerlink" title="层"></a>层</h2><p>类似CAD一样，当绘制立体交叉口时，设置高度不同，就可以分成很多层，可以根据需要关闭和开启相应的层</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>添加底图</p>
+<h2 id="快速浏览"><a href="#快速浏览" class="headerlink" title="快速浏览"></a>快速浏览</h2><p>在绘图区域点击路段，则在左下角快速浏览选项卡就可以显示该路段的属性<br>按住CTRL键在绘图区域点击选择多个路段，则在左下角快速浏览选项卡就可以显示这些路段的属性<br>路段的相同属性会具体显示出来，多个路段中的不同属性则以*号显示</p>
+<h2 id="鹰眼图"><a href="#鹰眼图" class="headerlink" title="鹰眼图"></a>鹰眼图</h2><p>显示一个缩小的全图和一个视图框，拖动视图框可以调整绘图区域的具体视图</p>
+<h2 id="路网编辑器"><a href="#路网编辑器" class="headerlink" title="路网编辑器"></a>路网编辑器</h2><p>选择视图——打开新的路网编辑器可以调出多个路网编辑器选项卡（显示在窗口最底部）<br>可以将路网编辑器选项卡拖出来重新布局，可以多个编辑器窗口同时排列</p>
+<h1 id="背景图导入"><a href="#背景图导入" class="headerlink" title="背景图导入"></a>背景图导入</h1><p>读取背景图，来自遥感/航拍/电子底图/CAD图等<br>可以对背景图缩放比例<br>可以移动背景图<br>layout文件<br>如果一个路网模型需要几个工程师分开同时做的话，需要事先定义好比例再开始创建路网</p>
+<p>导入背景图<br>1、在路网对象选项卡中选择背景图片按钮<br>2、在空白处单击右键打开快捷菜单选择添加背景图片<br>3、选择路径并导入<br>4、在路网编辑器工具栏下点击显示整个路网按钮<br>5、图片上右击选择设置比例<br>7、左击拖动一定长度并设置比例的实际距离<br>8、导入完成</p>
+<p>在背景选项卡，可以单独设置显示或隐藏某一个背景底图</p>
+<h1 id="路段和连接器"><a href="#路段和连接器" class="headerlink" title="路段和连接器"></a>路段和连接器</h1><h2 id="新建路段"><a href="#新建路段" class="headerlink" title="新建路段"></a>新建路段</h2><p>1、在路网对象中选项卡中选择添加路段，<br>   点击两端拖动长度<br>   摁住ctrl+鼠标右键拖动出一条新的路段<br>2、路段中间CTRL+右击可以添加新的节点，删除节点直接用鼠标左键拖动到端点处即可删除<br>   或者右击打开右键菜单选择删除点<br>3、在路段中右击选择添加点也可以添加节点</p>
+<h2 id="打断路段"><a href="#打断路段" class="headerlink" title="打断路段"></a>打断路段</h2><p>在想要打断路段的地方右击选择拆分路段就能打断，打断后产生一个连接器连接着两个路段</p>
+<h2 id="添加中间点"><a href="#添加中间点" class="headerlink" title="添加中间点"></a>添加中间点</h2><p>1、在添加中间点的起始位置摁住ATL+鼠标左键拖动到结束位置，弹出添加中间点对话框<br>2、选择中间点数量，中间点数量指的是路段起点到中间节点的中间点数。两边对称添加</p>
+<h2 id="添加车道"><a href="#添加车道" class="headerlink" title="添加车道"></a>添加车道</h2><p>1、双击鼠标弹出路段属性对话框可以设置车道数，但是这样会在路中心线两边对称添加车道<br>2、右键单击路段弹出右键菜单，可以选择在左边/右边插入车道</p>
+<h2 id="路段复制"><a href="#路段复制" class="headerlink" title="路段复制"></a>路段复制</h2><p>1、对需要复制的路段点选，CTRL+c并CTRL+v<br>2、摁住CTRL+鼠标左键拖拽要复制的路段就能复制出来</p>
+<h2 id="旋转路段"><a href="#旋转路段" class="headerlink" title="旋转路段"></a>旋转路段</h2><p>点选要旋转的路段，摁住ATL+鼠标左键不放旋转</p>
+<h2 id="选择重合的路段"><a href="#选择重合的路段" class="headerlink" title="选择重合的路段"></a>选择重合的路段</h2><p>选中路段后，要选择叠加的另一条路段，摁住TAB键</p>
+<h2 id="设置路段高度"><a href="#设置路段高度" class="headerlink" title="设置路段高度"></a>设置路段高度</h2><p>1、新建时或双击现有路段打开路段属性设置界面，在显示选项卡中设置Z偏移量<br>2、然后右键打开菜单中选择重新计算多义线即可<br>3、ctrl+d可以切换成3D视图</p>
+<h2 id="画交叉口进口的路段、渐变段和展宽段"><a href="#画交叉口进口的路段、渐变段和展宽段" class="headerlink" title="画交叉口进口的路段、渐变段和展宽段"></a>画交叉口进口的路段、渐变段和展宽段</h2><p>第一种方法<br>1、分别在路段画3车道的路段，展宽段画4车道的路段<br>2、画渐变段：用在路段和展宽段间画两个连接器，一个连接器是1~3车道连接1~3车道，另一个是路段3车道连接展宽段的4车道<br>第二种方法<br>1、分别在路段画3车道的路段，展宽段画4车道的路段<br>2、在路段末端进行打断，打断出的一小节路段设置为4条车道，其中4车道为0.1m<br>3、画渐变段：在打断产生一小节路段后再画一个连接器连接展宽段即为渐变段<br>4、ctrl+v可以开启或关闭某类路网对象的视图</p>
+<h2 id="设置允许-不允许变道"><a href="#设置允许-不允许变道" class="headerlink" title="设置允许/不允许变道"></a>设置允许/不允许变道</h2><p>打开路段设置界面，在车道选项卡的“不向左变道”进行勾选</p>
+<h2 id="对于其他行驶方向车辆到达展宽段无法变道问题"><a href="#对于其他行驶方向车辆到达展宽段无法变道问题" class="headerlink" title="对于其他行驶方向车辆到达展宽段无法变道问题"></a>对于其他行驶方向车辆到达展宽段无法变道问题</h2><p>可以将交叉口的每一条车道分开画，这样可以根据具体行驶方向连接不同车道，车辆提前变道，不必产生展宽段变道问题</p>
+<h2 id="快速创建反方向同类型车道"><a href="#快速创建反方向同类型车道" class="headerlink" title="快速创建反方向同类型车道"></a>快速创建反方向同类型车道</h2><p>在原来已经创建设置好的车道上右键弹出菜单选择“创建反方向车道”</p>
+<h1 id="定义分布"><a href="#定义分布" class="headerlink" title="定义分布"></a>定义分布</h1><h2 id="定义期望车速分布"><a href="#定义期望车速分布" class="headerlink" title="定义期望车速分布"></a>定义期望车速分布</h2><p>基本数据——分布——期望速度，在下方弹出列表速度<br>空白处右击新建弹出新建界面，设置上下限速度，默认是线性分布<br>如果要设置非线性分布，在速度函数线上右击出现一个红点后拖拽调整分布比例</p>
+<h2 id="定义时间分布"><a href="#定义时间分布" class="headerlink" title="定义时间分布"></a>定义时间分布</h2><p>一般用在停车时间、过闸时间等<br>基本数据——分布——时间，在下方弹出列表<br>空白处右击新建弹出新建界面，可以选择正态分布或者经验分布曲线</p>
+<h2 id="车辆类型"><a href="#车辆类型" class="headerlink" title="车辆类型"></a>车辆类型</h2><p>基本数据——车辆类型新建<br>设置种类、外观、速度、载客人数等各种属性</p>
+<h2 id="车辆模型"><a href="#车辆模型" class="headerlink" title="车辆模型"></a>车辆模型</h2><p>基本数据——分布——2D/3D模型，选择具体车辆类型会弹出该类的具体比例<br>主要是针对某种车辆类型的具体2D/3D模型比例分布进行设置<br>如设置某品牌的车辆在小汽车中的比例是多少<br>比例分布加起来可以不为1</p>
+<h2 id="颜色分布"><a href="#颜色分布" class="headerlink" title="颜色分布"></a>颜色分布</h2><p>基本数据——分布——颜色，选择具体名称会弹出该名称的具体比例</p>
+<h2 id="车辆类别"><a href="#车辆类别" class="headerlink" title="车辆类别"></a>车辆类别</h2><p>车辆类型的集合（type）一个type可能包含小汽车、大货车等等</p>
+<p>先定义好自己需要的颜色和车辆2D/3D模型，然后定义自己需要的车辆类型，最后定义车辆类别</p>
+<h1 id="车辆输入设置"><a href="#车辆输入设置" class="headerlink" title="车辆输入设置"></a>车辆输入设置</h1><h2 id="驾驶行为设置"><a href="#驾驶行为设置" class="headerlink" title="驾驶行为设置"></a>驾驶行为设置</h2><p>驾驶行为包括自由、逼近、跟随和危险<br>1、基本数据——驾驶行为点击在下方底部栏打开驾驶行为列表，双击某一行，打开具体设置驾驶行为参数集界面<br>2、在跟车选项卡的模型参数中修改停车间距和安全距离就是修改了驾驶行为的重要特征<br>3、跟车模型可设置wiedemann74（用于城市道路）和wiedemann99（用于高速道路上面）</p>
+<h2 id="定义车辆组成"><a href="#定义车辆组成" class="headerlink" title="定义车辆组成"></a>定义车辆组成</h2><p>1、选择交通——车辆组成，打开车辆组成选项卡<br>2、选择相对流量显示<br>3、右键选择新建车辆组成<br>3、在具体车辆组成中选择新建车辆类型，并修改类型和比例等</p>
+<h2 id="添加车辆输入"><a href="#添加车辆输入" class="headerlink" title="添加车辆输入"></a>添加车辆输入</h2><p>第一种方法<br>1、在路网对象中选择车辆输入按钮<br>2、在要添加的路段地方ctrl+右键点击设置一条车辆输入的黑线<br>3、双击黑线弹出设置列表，设置流量和车辆构成</p>
+<p>第二种方法<br>1、在要添加的路段地方右键选择新建车辆输入<br>2、在下方列表添加输入参数</p>
+<h1 id="冲突让行"><a href="#冲突让行" class="headerlink" title="冲突让行"></a>冲突让行</h1><h2 id="设置冲突区域"><a href="#设置冲突区域" class="headerlink" title="设置冲突区域"></a>设置冲突区域</h2><p>1、在路网对象激活冲突区域按钮<br>2、路网种显示的深黄色地方就是有冲突的区域<br>3、点击一个冲突区域，深黄色变亮黄色表示激活<br>4、右键打开菜单中可以选择谁先行谁后行<br>5、也可以摁住ctrl键并右击冲突区域，会变成一个方向红色一个方向绿色<br>6、哪边绿色哪边先行，都是红色表示互相让行</p>
+<h2 id="定义时间区间"><a href="#定义时间区间" class="headerlink" title="定义时间区间"></a>定义时间区间</h2><p>1、首先布置一个车辆输入<br>2、在空白处右击选择“编辑时间间隔”<br>3、底部弹出时间间隔栏，然后空白处右击新建新的时间间隔<br>4、在底部车辆输入栏点击一个小扳手按钮，设置要在栏内显示的选项，将流量输入选项加进去<br>5、车辆输入栏单栏下拉框中选择时间间隔内的车流量<br>6、在右边弹出的时间间隔进行勾选设置哪个时间段的车流量为多少</p>
+<h1 id="路径设置"><a href="#路径设置" class="headerlink" title="路径设置"></a>路径设置</h1><h2 id="新建路径"><a href="#新建路径" class="headerlink" title="新建路径"></a>新建路径</h2><p>1、路网对象中选择车辆路径激活<br>2、ctrl+右键在路径决策起点点击，出现品红色线<br>3、在路径决策终点点击，出现蓝色线<br>4、鼠标移动到空白处出现交叉时单击结束<br>5、双击路径决策中品红色的线，底部弹出设置窗口<br>6、激活同步性按钮，当选择设置界面的不同路段时，绘图区域会高亮显示选中路段<br>7、根据不同路段设置相对车流比例</p>
+<h2 id="添加已有路径"><a href="#添加已有路径" class="headerlink" title="添加已有路径"></a>添加已有路径</h2><p>1、如果要在已有决策路径上添加新的路径，在路径决策的品红色起点线右键选择添加决策路径继续添加<br>2、如果暂时不需要车辆通过某条决策路径，可以在这条路径上的车流量比例设为0<br>3、将已创建的路径按住鼠标拖动到空白处出现交叉后即可删除</p>
+<h2 id="限制路径中的车辆类型"><a href="#限制路径中的车辆类型" class="headerlink" title="限制路径中的车辆类型"></a>限制路径中的车辆类型</h2><p>1、要只限制某一种车型的行驶方向，在静态车辆路径栏去掉所有车辆类型的勾，选择某种车辆类别</p>
+<h2 id="在路径中添加不同的时间间隔"><a href="#在路径中添加不同的时间间隔" class="headerlink" title="在路径中添加不同的时间间隔"></a>在路径中添加不同的时间间隔</h2><p>1、要在静态路径种设置时间间隔，选中路径在右边栏空白处右键编辑时间区间，新建时间间隔<br>2、点击小扳手按钮，将输入车流中具体的时间间隔添加进去</p>
+<h1 id="信号控制"><a href="#信号控制" class="headerlink" title="信号控制"></a>信号控制</h1><h2 id="添加信号控制方案"><a href="#添加信号控制方案" class="headerlink" title="添加信号控制方案"></a>添加信号控制方案</h2><p>1、选择信号控制——信号控制机<br>2、底部弹出信号控制栏列表，右击选择新建，弹出信号设置界面<br>3、在设置界面点击编辑信号控制按钮，出现vissig界面<br>4、选中信号灯组，右边空白处新建相位<br>5、在每个方案可以选择信号灯的序列，设置每个信号灯时间<br>6、选中绿间隔矩阵，新建<br>7、选中信号配时方案，新建<br>8、在信号配时方案中，绿灯间隔可以选择刚刚新建好的绿灯间隔矩阵<br>9、通过拖拽每个相位的时间长度来调整相位配时<br>10、借助绿间隔矩阵，通过查看背景色中是否为橙色判断信号配时有没有冲突</p>
+<h2 id="装信号灯头（SH）"><a href="#装信号灯头（SH）" class="headerlink" title="装信号灯头（SH）"></a>装信号灯头（SH）</h2><p>1、路网对象选择信号灯头<br>2、在停车线附近位置ctrl+右击打开信号灯设置，注意选择信号控制机和信号灯组<br>3、把信号灯头放置在连接器上，因为车辆会默认从路段开到连接器，连接器上有信号灯才停</p>
+<h1 id="限速设置"><a href="#限速设置" class="headerlink" title="限速设置"></a>限速设置</h1><h2 id="减速设置"><a href="#减速设置" class="headerlink" title="减速设置"></a>减速设置</h2><p>1、路网对象中选择减速区域<br>2、ctrl+右击拖拽画出要减速的路径，弹出设置界面<br>3、选择期望速度分布和减速度</p>
+<h2 id="期望速度设置"><a href="#期望速度设置" class="headerlink" title="期望速度设置"></a>期望速度设置</h2><p>1、路网对象中选择期望速度决策点<br>2、ctrl+右击单击某点创建决策点，弹出设置速度界面<br>3、该决策点设置后，经过该决策点的车辆会一直保持决策速度，如果要修改速度，在后方重新再设置一个决策点</p>
+<h1 id="公交设置"><a href="#公交设置" class="headerlink" title="公交设置"></a>公交设置</h1><h2 id="公交车站设置"><a href="#公交车站设置" class="headerlink" title="公交车站设置"></a>公交车站设置</h2><p>1、路网对象中选择公交车站<br>2、ctrl+右击拖拽画出公交车站区域，弹出设置界面（或者直接ctrl+右击添加）<br>3、要创建港湾车站，先将创建好的公交站区域移动到港湾路段边上，然后在公交站上右击选择创建港湾车站</p>
+<h2 id="公交线路设计"><a href="#公交线路设计" class="headerlink" title="公交线路设计"></a>公交线路设计</h2><p>1、路网对象中选择公交线路<br>2、在路段上右击选择添加公交线路，并在末端点击，弹出设置界面<br>3、在开始时间选项卡内右击新建公交班次（只能添加一个班次）<br>4、要添加多个班次，直接右击选择“创建开始时间”，设置开始/结束时间及发车频率</p>
+<h2 id="将车站与线路进行关联"><a href="#将车站与线路进行关联" class="headerlink" title="将车站与线路进行关联"></a>将车站与线路进行关联</h2><p>1、选中公交线路后，在公交站附近的公交线路上右击出现一个小的节点<br>2、拖动节点到车站上面<br>3、在弹出的设置界面勾选激活公交车站</p>
+<h1 id="停车设置"><a href="#停车设置" class="headerlink" title="停车设置"></a>停车设置</h1><h2 id="闸机收费站等收入口停车"><a href="#闸机收费站等收入口停车" class="headerlink" title="闸机收费站等收入口停车"></a>闸机收费站等收入口停车</h2><p>1、路网对象中选择停车标志<br>2、右击创建停车标志<br>3、在时间分布选项卡中勾选并创建时间分布</p>
+<h2 id="停车位停车"><a href="#停车位停车" class="headerlink" title="停车位停车"></a>停车位停车</h2><p>1、路网对象中选择激活停车场<br>2、在路网上右击选择添加停车场。在弹出的界面设置长度、车位等<br>3、路网对象中选择车辆路径，在下拉箭头列表中选择车辆路径（停车）<br>4、创建停车路径，注意停车路径末端要落到前面设置好的停车区域<br>5、停车比率为100%，意思是有停车位就停进去，没有停车位就不停</p>
+<h2 id="要改变停车位的停车顺序"><a href="#要改变停车位的停车顺序" class="headerlink" title="要改变停车位的停车顺序"></a>要改变停车位的停车顺序</h2><p>1、打开停车位的属性设置界面<br>2、在额外属性选项卡，设置最后的吸引为100，首个的吸引为0，则最后的吸引最大。<br>3、由于最后的吸引比首个大，停车从最后一个停车位开始停</p>
+<h2 id="模拟司机停车对外侧道路占用影响"><a href="#模拟司机停车对外侧道路占用影响" class="headerlink" title="模拟司机停车对外侧道路占用影响"></a>模拟司机停车对外侧道路占用影响</h2><p>1、在停车场设置的停车空间选项卡中选择相应占道时间分布，模拟不同司机有不同的占道情况<br>2、选择基本数据——驾驶行为<br>3、在底部弹出的驾驶行为选项卡，新建一种驾驶行为<br>4、双击打开新建的驾驶行为，在横向行为选项卡上勾选“与相邻车道上的车辆保持横向距离”<br>5、选择基本数据——路段驾驶行为类型，弹出的驾驶行为列表右键新建一个驾驶行为类型<br>6、该新建的驾驶行为类型使用刚刚为停车专门新建的驾驶行为<br>7、双击停车场所在的路段，弹出的属性设置界面将行为类型修改为刚刚新建的驾驶行为类型</p>
+<h1 id="仿真参数"><a href="#仿真参数" class="headerlink" title="仿真参数"></a>仿真参数</h1><h2 id="仿真参数解释"><a href="#仿真参数解释" class="headerlink" title="仿真参数解释"></a>仿真参数解释</h2><p>1、如果要运行一个高峰小时的仿真结果，建议设置仿真时间为4500s——5400s，给充分时间预热<br>2、仿真精度：即对仿真时间切片，每隔多久改变一次仿真状态<br>3、随机种子：仿真运行的随机数。如果不修改随机种子则每次的仿真结果都是相同的<br>4、随机种子增量：即每运行一次随机种子数增加值<br>5、运行次数：根据修改的随机种子增量重复运行的次数<br>6、仿真运行速度：仿真秒与实际秒的比值<br>7、多核数量：根据计算机核数修改<br>8、中断时刻：仿真需要中断的时间<br>9、点击界面上方的快速模式按钮可以加快仿真速度</p>
+<h1 id="仿真结果评价"><a href="#仿真结果评价" class="headerlink" title="仿真结果评价"></a>仿真结果评价</h1><h2 id="排队计数器"><a href="#排队计数器" class="headerlink" title="排队计数器"></a>排队计数器</h2><p>1、左侧路网对象点击激活排队计数器<br>2、在设置位置CTRL+右键点击创建<br>3、选择评估——配置打开评估设置窗口，选择结果特征属性选项卡<br>4、在收集数据一列勾选排队的框，设置开始结束时间和时间间隔<br>5、点击“更多”弹出排队的定义设置<br>6、仿真后，选择评估——结果列表——排队长度查看仿真结果</p>
+<h2 id="数据采集点"><a href="#数据采集点" class="headerlink" title="数据采集点"></a>数据采集点</h2><p>数据采集点用来收集数据，输出结果<br>数据采集器用来配合信号感应控制使用<br>1、左侧路网对象点击激活数据采集点<br>2、在设置位置CTRL+右键点击创建<br>3、选择评估——测量定义——数据采集设施<br>4、在底部截面数据采集界面的数据采集点中勾选刚刚创建的编号<br>5、选择评估——配置打开评估设置窗口，选择结果特征属性选项卡<br>6、在收集数据一列勾选数据采集点的框，设置时间区间<br>7、仿真后，选择评估——结果列表——数据采集查看仿真结果</p>
+<h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><p>1、左侧路网对象点击激活节点<br>2、路网中右击选择添加节点，弹出节点设置框，勾选节点评价<br>3、选择评估——配置打开评估设置窗口，选择结果特征属性选项卡<br>4、在收集数据一列勾选节点的框，设置时间区间<br>5、点击“更多”弹出排队的定义设置<br>6、仿真后，选择评估——结果列表——节点查看仿真结果<br>7、在转向结果中，“1-7@xx-20@xx”表示节点1中的路段7转向路段20的结果</p>
+<h1 id="插入3D模型"><a href="#插入3D模型" class="headerlink" title="插入3D模型"></a>插入3D模型</h1><p>1、左侧路网对象点击激活静态3D模型<br>2、在路网右击选择添加3D模型<br>3、选择3D模型<br>4、CTRL+d切换二维视图下，通过复制粘贴批量添加模型</p>
+<h2 id="3D信号灯"><a href="#3D信号灯" class="headerlink" title="3D信号灯"></a>3D信号灯</h2><p>1、左侧路网对象点击激活3D交通信号<br>2、在路网右击选择添加3D交通信号，弹出对话框<br>3、点击添加灯臂按钮，弹出信号灯臂<br>4、点击添加信号灯按钮，弹出3D信号灯头<br>5、选择信号灯式样，在所属指示方向上添加信号灯组和信号灯<br>6、分别添加左转和直行两个信号灯并添加信号灯组配时方案<br>7、可以在二维视图下对信号灯的臂长、信号灯位置拖拽设置<br>8、背景图设置好后，可以在路网对象中关闭信号灯头，仿真时就隐藏掉<br>   也可以在信号灯头按钮的详细设置中显示方式下拉列表选择停车线</p>
+<h1 id="仿真录像"><a href="#仿真录像" class="headerlink" title="仿真录像"></a>仿真录像</h1><p>1、选择演示——情景提要，弹出情景提要列表<br>2、右击选择新建情景提要<br>3、在情景提要框的下拉列表中选择关键帧<br>4、调整好画面角度，在右侧列表右击选择新建帧，设置起始时间和持续时间<br>5、切换好角度后，继续点击添加新的帧，当设置好起始时间时，过渡时间自动计算出来<br>6、如果想根据镜头的录像速度预览，在情景提要一栏右键选择“根据AVI速度预览”</p>
+<h2 id="录制多个仿真视频"><a href="#录制多个仿真视频" class="headerlink" title="录制多个仿真视频"></a>录制多个仿真视频</h2><p>1、每个情景提要就是录制一个视频，录制多个视频要新建多个情景提要<br>2、在新建的情景提要下新建关键帧<br>3、在关键帧设置时间以及相机位置<br>4、如果要同时录制多个视频，记得勾选recavi选项<br>5、可以设置每个视频的文件名，如果不设置会自动默认<br>6、勾选演示——record AVIs选项<br>7、然后开始运行仿真<br>8、运行完后视频压缩建议选择MP4格式或Microsoft video格式</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+            <a href="/tags/专业软件/" rel="tag"># 专业软件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/31/transcad笔记/" rel="next" title="transcad笔记">
+                <i class="fa fa-chevron-left"></i> transcad笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/01/vissim5笔记/" rel="prev" title="vissim笔记">
+                vissim笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Cheng6774</p>
+              <p class="site-description motion-element" itemprop="description">This is Cheng's blog</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#README"><span class="nav-number">1.</span> <span class="nav-text">README</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vissim7学习"><span class="nav-number">2.</span> <span class="nav-text">vissim7学习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础操作"><span class="nav-number">3.</span> <span class="nav-text">基础操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路网对象栏"><span class="nav-number">3.1.</span> <span class="nav-text">路网对象栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层"><span class="nav-number">3.2.</span> <span class="nav-text">层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">3.3.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速浏览"><span class="nav-number">3.4.</span> <span class="nav-text">快速浏览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鹰眼图"><span class="nav-number">3.5.</span> <span class="nav-text">鹰眼图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路网编辑器"><span class="nav-number">3.6.</span> <span class="nav-text">路网编辑器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背景图导入"><span class="nav-number">4.</span> <span class="nav-text">背景图导入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路段和连接器"><span class="nav-number">5.</span> <span class="nav-text">路段和连接器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建路段"><span class="nav-number">5.1.</span> <span class="nav-text">新建路段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打断路段"><span class="nav-number">5.2.</span> <span class="nav-text">打断路段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加中间点"><span class="nav-number">5.3.</span> <span class="nav-text">添加中间点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加车道"><span class="nav-number">5.4.</span> <span class="nav-text">添加车道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路段复制"><span class="nav-number">5.5.</span> <span class="nav-text">路段复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旋转路段"><span class="nav-number">5.6.</span> <span class="nav-text">旋转路段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择重合的路段"><span class="nav-number">5.7.</span> <span class="nav-text">选择重合的路段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置路段高度"><span class="nav-number">5.8.</span> <span class="nav-text">设置路段高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#画交叉口进口的路段、渐变段和展宽段"><span class="nav-number">5.9.</span> <span class="nav-text">画交叉口进口的路段、渐变段和展宽段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置允许-不允许变道"><span class="nav-number">5.10.</span> <span class="nav-text">设置允许/不允许变道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于其他行驶方向车辆到达展宽段无法变道问题"><span class="nav-number">5.11.</span> <span class="nav-text">对于其他行驶方向车辆到达展宽段无法变道问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速创建反方向同类型车道"><span class="nav-number">5.12.</span> <span class="nav-text">快速创建反方向同类型车道</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定义分布"><span class="nav-number">6.</span> <span class="nav-text">定义分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义期望车速分布"><span class="nav-number">6.1.</span> <span class="nav-text">定义期望车速分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义时间分布"><span class="nav-number">6.2.</span> <span class="nav-text">定义时间分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#车辆类型"><span class="nav-number">6.3.</span> <span class="nav-text">车辆类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#车辆模型"><span class="nav-number">6.4.</span> <span class="nav-text">车辆模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#颜色分布"><span class="nav-number">6.5.</span> <span class="nav-text">颜色分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#车辆类别"><span class="nav-number">6.6.</span> <span class="nav-text">车辆类别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#车辆输入设置"><span class="nav-number">7.</span> <span class="nav-text">车辆输入设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#驾驶行为设置"><span class="nav-number">7.1.</span> <span class="nav-text">驾驶行为设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义车辆组成"><span class="nav-number">7.2.</span> <span class="nav-text">定义车辆组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加车辆输入"><span class="nav-number">7.3.</span> <span class="nav-text">添加车辆输入</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冲突让行"><span class="nav-number">8.</span> <span class="nav-text">冲突让行</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置冲突区域"><span class="nav-number">8.1.</span> <span class="nav-text">设置冲突区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义时间区间"><span class="nav-number">8.2.</span> <span class="nav-text">定义时间区间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路径设置"><span class="nav-number">9.</span> <span class="nav-text">路径设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建路径"><span class="nav-number">9.1.</span> <span class="nav-text">新建路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加已有路径"><span class="nav-number">9.2.</span> <span class="nav-text">添加已有路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#限制路径中的车辆类型"><span class="nav-number">9.3.</span> <span class="nav-text">限制路径中的车辆类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在路径中添加不同的时间间隔"><span class="nav-number">9.4.</span> <span class="nav-text">在路径中添加不同的时间间隔</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号控制"><span class="nav-number">10.</span> <span class="nav-text">信号控制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加信号控制方案"><span class="nav-number">10.1.</span> <span class="nav-text">添加信号控制方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装信号灯头（SH）"><span class="nav-number">10.2.</span> <span class="nav-text">装信号灯头（SH）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#限速设置"><span class="nav-number">11.</span> <span class="nav-text">限速设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#减速设置"><span class="nav-number">11.1.</span> <span class="nav-text">减速设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#期望速度设置"><span class="nav-number">11.2.</span> <span class="nav-text">期望速度设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#公交设置"><span class="nav-number">12.</span> <span class="nav-text">公交设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#公交车站设置"><span class="nav-number">12.1.</span> <span class="nav-text">公交车站设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公交线路设计"><span class="nav-number">12.2.</span> <span class="nav-text">公交线路设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将车站与线路进行关联"><span class="nav-number">12.3.</span> <span class="nav-text">将车站与线路进行关联</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#停车设置"><span class="nav-number">13.</span> <span class="nav-text">停车设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#闸机收费站等收入口停车"><span class="nav-number">13.1.</span> <span class="nav-text">闸机收费站等收入口停车</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#停车位停车"><span class="nav-number">13.2.</span> <span class="nav-text">停车位停车</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#要改变停车位的停车顺序"><span class="nav-number">13.3.</span> <span class="nav-text">要改变停车位的停车顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟司机停车对外侧道路占用影响"><span class="nav-number">13.4.</span> <span class="nav-text">模拟司机停车对外侧道路占用影响</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#仿真参数"><span class="nav-number">14.</span> <span class="nav-text">仿真参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#仿真参数解释"><span class="nav-number">14.1.</span> <span class="nav-text">仿真参数解释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#仿真结果评价"><span class="nav-number">15.</span> <span class="nav-text">仿真结果评价</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#排队计数器"><span class="nav-number">15.1.</span> <span class="nav-text">排队计数器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据采集点"><span class="nav-number">15.2.</span> <span class="nav-text">数据采集点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点"><span class="nav-number">15.3.</span> <span class="nav-text">节点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入3D模型"><span class="nav-number">16.</span> <span class="nav-text">插入3D模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3D信号灯"><span class="nav-number">16.1.</span> <span class="nav-text">3D信号灯</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#仿真录像"><span class="nav-number">17.</span> <span class="nav-text">仿真录像</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#录制多个仿真视频"><span class="nav-number">17.1.</span> <span class="nav-text">录制多个仿真视频</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cheng6774</span>
+
+  
+
+  
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.6</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.6"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
